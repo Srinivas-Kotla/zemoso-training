@@ -57,11 +57,11 @@ public class VampireNumbers{
 	return isVamp;
 }
 	public static void main(String [] args){
-		int[] array = new int[200];
+		ArrayList<Integer> array = new ArrayList<Integer> (200);
 		int index = 0;
 
-		for(int i=0;i<array.length;i++){
-			array[i] = 1000000;
+		for(int i=0;i<array.size();i++){
+			array.add(1000000);
 		}
 
 //loop for finding the vampire numbers with 2 digit fangs.
@@ -71,7 +71,7 @@ public class VampireNumbers{
 					break;
 
 				if(checkVampire(i,j) == true){
-					array[index] = i*j;
+					array.add(index,i*j);
 					index++;
 				}
 
@@ -84,17 +84,17 @@ public class VampireNumbers{
 				if(index == 200)
 					break;
 
-				if(checkVampire(i,j) == true){
-					array[index] = i*j;
+				if(checkVampire(i,j) == true && !array.contains(i*j)){
+					array.add(index,i*j);
 					index++;
 				}
 			}
 		}
 
 //sorting the array to get the first 100 vampire numbers
-		Arrays.sort(array);
+		Collections.sort(array);
 		for(int i=0;i<100;i++){
-			System.out.println(array[i]);
+			System.out.println(array.get(i));
 		}
 	}
 }
