@@ -46,9 +46,10 @@ public class ErrorHandling{
 			error(rn.nextInt(5));
 
 		}catch(MyException1|MyException2|MyException3 e){
-			if(e instanceof MsgInterface){
+			/*if(e instanceof MsgInterface){
 				((MsgInterface)e).msg();
-			}
+			}*/
+			e.msg();
 			
 		}finally{
 			System.out.println("Final block running.....");
