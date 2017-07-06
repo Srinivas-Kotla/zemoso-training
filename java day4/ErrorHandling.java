@@ -8,7 +8,8 @@ class MyException1 extends Exception implements MsgInterface{
 	private int i = 5;
 
 	public void msg(){ 
-		System.out.println("Error message integer value: " + this.i);
+		System.out.println("Throwing MyException1.....!!");
+		System.out.println("Error message containing info of field integer : " + this.i);
 	}
 }
 
@@ -16,7 +17,8 @@ class MyException2 extends Exception implements MsgInterface{
 	private String s = "Hello";
 
 	public void msg(){
-		System.out.println("Error message String: "+ this.s);
+		System.out.println("Throwing MyException2.....!!");
+		System.out.println("Error message containing info of field String : " + this.s);
 	}
 }
 
@@ -24,7 +26,8 @@ class MyException3 extends Exception implements MsgInterface{
 	private char c = 'a';
 
 	public void msg(){
-		System.out.println("Error message character: " + this.c);
+		System.out.println("Throwing MyException3.....!!");
+		System.out.println("Error message containing info of field character : " + this.c);;
 	}
 }
 
@@ -50,9 +53,10 @@ public class ErrorHandling{
 				((MsgInterface)e).msg();
 			}*/
 			e.msg();
+			e.printStackTrace();
 			
 		}finally{
-			System.out.println("Final block running.....");
+			System.out.println("\n Always running the final block.........");
 		}
 	}
 }
