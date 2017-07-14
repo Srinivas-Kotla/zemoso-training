@@ -22,8 +22,8 @@ public class Data{
      * initialises it's member variables in default
      */
     public void printMembers(){
-        System.out.println(this.number); // cannot access objects without 							    reference to a class. Here an object 							    is created but it has no reference to 							    the class. So it cannot access the 							    methods and members of the class.
-        System.out.println(this.letter); // Unable to print the object as it 							    has no reference.
+        System.out.println(this.number); 
+        System.out.println(this.letter); 
     }
 
     /**
