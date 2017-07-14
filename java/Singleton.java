@@ -1,15 +1,42 @@
+/**
+ * Created by zemoso on 14/7/17.
+ */
 package srinivas.assignment.singleton;
 
-public class Singleton{
-	String s;
+/**
+ * Class Singleton to see the implementation of Single object creation
+ *
+ * @author Srinivas Kotla
+ */
+ public class Singleton {
+    /**
+     * Static instance of the class the itself
+     */
+    private static Singleton instance = new Singleton();
+    /**
+     * String field of the class
+     */
+    String s;
+    /**
+     * Private constructor to hide the constructor for creation of objects;
+     */
+    private Singleton() {}
 
-	public static Singleton set(String a){
-		Singleton x = new Singleton();
-		x.s = a;
-		return x;
-	}	
+    /**
+     * Static method for returning the instance of the class
+     * @param a
+     * @return Instance of the class
+     */
+    public static Singleton getInstance(String a){
+        instance.s = a;
+        return instance;
+    }
 
-	public void print(){
-		System.out.println(this.s);
-	}
+    /**
+     * public method to print the string field of the class
+     */
+    public void print(){
+        System.out.println(this.s);
+    }
 }
+
