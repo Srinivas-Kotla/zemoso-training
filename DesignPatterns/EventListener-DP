@@ -1,0 +1,15 @@
+﻿Pattern:-EventListener interface implements the observer design pattern.
+
+Description:-As the observer pattern contains a subject and objects to be notified based on each state change of the subject
+
+So the classes implementing the Eventlistener act as the subject which receives the change in the state of the of the object.
+
+These classes are inheriting the superclass java.lang.Object which has the notify() and notifyall() methods to apply the changes to all the objects in the listener list.
+
+Other Patterns:-
+
+Other design does not seem to fit in event listener interface and the other interfaces implementing it as the whole implemention of event listener is based on subject’s change in state and the observers being notified and getting updated.
+
+
+
+

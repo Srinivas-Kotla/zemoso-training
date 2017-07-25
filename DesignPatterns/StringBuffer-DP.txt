@@ -1,0 +1,31 @@
+﻿Pattern:-StringBuffer class append method uses the Builder design pattern
+
+Description:-StringBuffer inherits the abstract class AbstractStringBuilder which overrides different append methods.
+
+Each append method takes different types of input arguments and checks for conditions to be satisfied to make the append on the given stringbuffer.
+
+Append methods checks for ensureCapacity of the char array if else increases the array to required capacity. Also cases for appending a number and different cases of objects.
+
+So the AbstractStringBuilder takes care of the exceptions just allowing the see it as basic appending of two objects
+
+Other Patterns :-
+
+An abstract factory or factory design pattern can also be used in this so each append method can be called defined on the conditions of the append being made.
+
+Singleton pattern cannot be used here as the context of singleton is completely out of the StringBuffer append methods.
+
+Prototype pattern cannot be used to here as the purpose of creating clones of an object has no use in this.
+
+Decorator pattern seems to work but we have explicitly call each a class to check for different conditions based on the inputs.
+
+Except these remaining patterns do not seem to fit in this scenario.
+
+
+
+
+
+
+
+
+
+
