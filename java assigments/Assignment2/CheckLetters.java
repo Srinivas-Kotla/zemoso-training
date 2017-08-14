@@ -33,3 +33,9 @@ public class CheckLetters {
 
     }
 }
+/*  The time complexity for the above code is O(n) as the checker function runs the
+    loop proportional to the size of the string and add function for a set has O(1)
+    complexity i.e constant time function.*/
+
+/*  Space complexity for the given code O(1) as we are creating a set of constant size 
+    i.e. for 26 alphabets. So the space complexity is O(1) */
